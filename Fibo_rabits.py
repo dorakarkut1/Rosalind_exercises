@@ -1,6 +1,6 @@
 
-n = 32
-k = 2
+n = 32 #number of months
+k = 2 # number of pairs reproduced each time
 
 def Fibo(n,k):
     fibo = [1,1]
