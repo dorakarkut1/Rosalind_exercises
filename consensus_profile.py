@@ -1,8 +1,23 @@
 from Bio import SeqIO
 import sys
 import numpy as np
+from Bio import motifs, SeqIO
+
+def solution_biopython():
+	#another solution using biopython
+	# im not the author of solution
+	m = motifs.create([record.seq
+					   for record
+					   in SeqIO.parse('rosalind_cons.txt', 'fasta')])
+
+	print(m.consensus)
+	for base, freqs in m.counts.items():
+		print('{}: {}'.format(base, ' '.join(map(str, freqs))))
+
+
 
 def another_solution():
+	# another solution using pandas
 	# im not the author of solution
 
 	filename = "rosalind_cons.txt"
@@ -74,4 +89,5 @@ if __name__ == '__main__':
 	print(consensus)
 	print('A: ',profile_A,'\nC: ',profileC,'\nG: ',profileG,'\nT: ',profileT)
 	"""
-	another_solution()
+	#another_solution()
+	solution_biopython()
