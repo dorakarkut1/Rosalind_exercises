@@ -1,7 +1,10 @@
 
-def ComplementaryDNA(file_path):
+def ComplementaryDNA(string):
+	"""
 	with open(file_path, 'r') as file:
 		string = file.read()
+	"""
+
 	compl = ''
 	nuc_dict = {
 		'A' : 'T',
