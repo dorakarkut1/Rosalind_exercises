@@ -38,7 +38,7 @@ def splicing():
     new = ''
     for seq in data[1:]:
         found = sequence.find(seq)
-        if found != -1:
+        if sequence.find(seq) != -1:
             sequence = sequence[:found] + sequence[found+len(seq):]
     return sequence
 
