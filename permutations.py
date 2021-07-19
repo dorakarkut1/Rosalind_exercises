@@ -1,4 +1,4 @@
-from itertools import permutations, combinations_with_replacement,product
+from itertools import permutations,product
 import numpy as np
 def permutation():
     n=7
